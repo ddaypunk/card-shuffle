@@ -6,21 +6,21 @@ class Card {
 	private Suits suit;
 	private Faces face;
 
-	public static class Builder {
+	static class Builder {
 		private Suits suit;
 		private Faces face;
 
-		public Builder withSuit(Suits suit){
+		Builder withSuit(Suits suit){
 			this.suit = suit;
 			return this;
 		}
 
-		public Builder withFace(Faces face){
+		Builder withFace(Faces face){
 			this.face = face;
 			return this;
 		}
 
-		public Card build(){
+		Card build(){
 			return new Card(this);
 		}
 
@@ -31,11 +31,11 @@ class Card {
 		face = builder.face;
 	}
 
-	public Suits getSuit(){
+	Suits getSuit(){
 		return this.suit;
 	}
 
-	public Faces getFace(){
+	Faces getFace(){
 		return this.face;
 	}
 }
